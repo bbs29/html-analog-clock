@@ -1,0 +1,75 @@
+body {
+  background-color: #eee;
+}
+
+section {
+  background-color: #FFF;
+  padding: 20px;
+  width: 550px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+#analogClock {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  
+}
+
+#analogClock > * {
+  grid-area: 1/1;
+}
+
+#analogClock .center {
+  width: 10px;
+  height: 10px;
+  background-color: #E83151;
+  border: 5px solid #FFF;
+  border-radius: 50%;
+  position: relative;
+  z-index: 100;
+}
+
+#analogClock .second, 
+#analogClock .hour,
+#analogClock .min {
+  height: 0px;
+  position: relative;
+  top: 0px;
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #222;
+ 
+}
+
+#analogClock .second {
+  
+  width: 140px;
+  border-top: 2px solid #E83151;
+   left: 70px;
+  
+  transform: rotate(var(--seconds));
+}
+
+#analogClock .hour {
+ 
+  width: 75px;
+  border-top: 8px solid #fff;
+   left: 38px;
+  
+  transform: rotate(var(--hours));
+}
+
+#analogClock .min {
+  
+  width: 140px;
+  border-top: 4px solid #fff;
+   left: 70px;
+ 
+  transform: rotate(var(--minutes));
+}
+
